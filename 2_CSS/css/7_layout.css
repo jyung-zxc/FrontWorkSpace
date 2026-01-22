@@ -1,0 +1,113 @@
+.box{
+    width: 100px;
+    height: 10px;
+    background-color: aqua;
+}
+
+.content{
+    /*
+        widthd/height 값은 기본적으로 content 영역의 크기를 지ㅓ장하는 속성
+    */
+    width: 150px;
+    height:  150px;
+}
+
+.border{
+    border: solid 10px red;
+}
+
+.padding{
+    padding : 30px;
+    /* content와 border 사이 간격을 30px 만듬 벌림 */
+}
+
+.margin{
+    margin : 50px
+}
+/* 서로 다른 요소의 margin이 곂치는 경우, 
+더큰 마진을 가진 요소의 값을 따른다. */
+#m1{
+    margin-top: 100px;
+}
+
+.padding.test{
+    padding-top : 20px;
+    padding-bottom : 20px;
+    padding-left: 30px; 
+    padding-right: 10px;
+}
+
+/* 패딩/마진 속성
+   작성방법에 따라 특정방향으로 크기를 지정할 수 있다.
+   */
+
+   /* 크기를 1개만 지정할 경우 : 상하좌우 
+      padding : 30px;
+
+값이 값 2개 :
+padding 30px
+   */
+
+   /* 값 2개: 상하 좌우 */
+   /* padding : 50px, 100px; */
+
+   /*  값 3개 이상 : 상, 좌우, 하 */
+/* padding :   10px,50px,100px; */
+
+   /* 값 4개 * 시계방향 */
+   /* padding : 10px 20px 30px 40px; */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#box-sizing{
+    /* 
+        테두리 10px, 패딩20px, 나머지 내용
+        전체 요소의 크기가 가로/세로 300px인 정사각형만들기
+    */
+    border: 10px solid black;
+    padding: 20px;
+
+    /* 
+        기본 box-sizing 사용시 padding과 border의 크기를 감안하여
+        가로,세로 크기를 계산해야 한다.
+    */
+
+    /* width: 240px;
+    height: 240px; */
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+
+    /* 
+        content-box(기본값)
+         - width / height 속성 지정시 content 영역의 크기를 지정
+
+         border-box
+          - width/height 속성 지정시 content + padding = border의크기를 
+            합산한 결과가 지정한 속성값과 같게 자동으로 계산하여 적용한다.
+    */
+}
+
+
+
+
+
+
+   

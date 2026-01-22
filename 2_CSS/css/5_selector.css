@@ -1,0 +1,15 @@
+
+/* 3 아이디 선택자 */
+
+
+
+/* 4순위 : 클래스 선택자 */
+.c1s1{
+    background-color: green;
+}
+
+/* 5순위 태그 선택자 */
+div{
+    width: 200px;
+    height : 200px  impoertant ; /* 1순위 */
+}
