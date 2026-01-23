@@ -13,13 +13,14 @@
 }
 
 /* 문제3 */
+/* input:not(input([type=submit]))*/
 #container3 > input:not([type=submit]){border: 1px solid blue;}
 /* 
 #container3 > input:nth-child(1){border: 1px solid blue;}
 #container3 > input:nth-child(2){border: 1px solid blue;} */
 
 /* 문제4 */
-#container4> h1,p[class="title"]{
+#container4> h1,#container4>.title{
     color:green;
     font-size: 20px;
 }
@@ -57,11 +58,12 @@ div[class|=admin]{
 }
 
 /* 문제 9 */
-p[title*=important]:not([title*=not-important]){
+#container9 p[title*=important]:not(p[title*=not-important]){
     background-color: red;
 }
 
 /* 문제 10 */
-#menu > li[class=active]{
+/* #menu > li[class=active] */
+#menu > .active {
     color: red;
 }

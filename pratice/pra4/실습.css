@@ -1,0 +1,100 @@
+*{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 800px;
+    margin: auto;    
+    
+}
+
+.hd1{
+    border: 1px solid black;
+    flex-wrap: wrap;
+    height:130px;
+    display: flex;
+    
+}
+
+.box1{
+    border: 1px solid black;
+    flex-basis: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2{
+    border: 1px solid black;
+    flex-basis: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box2>input[type="text"]{
+    width: 350px;
+    height: 30px;
+    border: 2px solid blue;
+}
+
+.box3{
+    border: 1px solid black;
+    flex-basis: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hd2{
+    border: 1px solid black;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.menu{
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+}
+
+.menu:hover{
+    background-color: mediumblue;
+    color: white;
+    width:100px;
+    cursor: pointer;  
+    border: 1px solid black;
+    border-radius: 20%;
+}
+
+.hd3{
+    display: flex;
+    width: auto;
+}
+
+.round1{
+    width: 70%;
+    height:500px;
+}
+
+.round2{
+    width: 30%;
+    height:500px;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+
+/* #query{
+    width:500px;
+    padding:10px;
+    font-weight:bold;
+    border: 2px solid black;
+    border-radius: 20%;
+} */

@@ -37,3 +37,65 @@
     background-color: yellow;
     display: inline-block;
 }
+
+#line-test > p:last-child{
+    line-height: 3;
+}
+
+#center-test{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+
+    text-align: center;
+    line-height: 200px;
+}
+
+#center-test > div{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    display: inline;
+    
+}
+
+#letter-test{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#shadow-test{
+    background-color: black;
+    padding:30px;
+}
+
+#shadow-test >p{
+    font-size : 75px;
+    font-weight: bold;
+}
+
+#shadow-test > p:nth-child(1){
+    color: orange;
+    text-shadow: 3px 3px white;
+                /* 가로 세로 색상 */
+}
+
+#shadow-test > p:nth-child(2){
+    color: white;
+    text-shadow: 5px 5px 5px #bbb;
+            /* 가로 세로 번짐 색상 */
+}
+
+#shadow-test > p:nth-child(3){
+    color:wheat;
+    opacity: 0, 0;
+}
+
+#shadow-test > p:nth-child(4){
+    text-shadow: (0,0,0 #ccc);
+                 0px -5px 4px  ;
+                 2px -5px 4px ;
+                 02px -5px 4px ;
+                 2px -5px 4px ;
+}

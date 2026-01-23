@@ -1,0 +1,89 @@
+img{
+    width: 250px;
+    height: auto;
+}
+
+/* transform : 변형과 관련된 속성 */
+.trans-x-2d:hover{
+    transform: translateX(100px);
+    /* transform: translateX(-100px); */
+}
+
+.trans-y-2d:hover{
+    transform:translateY(100px);
+    /* transform:translateY(-100px); */
+}
+
+.trans-d-2d:hover{
+    transform:translate(100px,-100px)
+}
+
+.trans-x-scale:hover{
+    transform: scaleX(2);
+}
+
+.trans-y-scale:hover{
+    transform: scaleY(2);
+}
+
+.trans-d-scale:hover{
+    transform: scale(2,2);
+}
+
+.trans-rotate:hover{
+    transform: rotateX(180deg);
+}
+
+.trans-3d:hover{
+    /* perspective(z축의 길이  : 원근법적용 */
+    transform: translate3d(300px,200px,100px);
+
+}
+
+.trans-rotate-x-3d:hover{
+ transform:perspective(300[px]),rotate
+ ('angle')   
+}
+
+/* .te */
+
+.box{
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.test1:hover{
+    background-color: yellow;
+}
+
+.test2:hover{
+    transform:rotate(360deg);
+    background-color:  skyblue;
+
+    border-radius: 50%;
+}
+
+.test3{
+    /* 변경에 걸리는 시간 */
+    transition-duration: 3s;
+
+    transition-timing-function: cubic-bezier(0,-0,69,0,2.91);
+}
+
+.test3:hover{
+    background-color: springgreen;
+}
+
+.test4{
+    transition-delay: 1s;
+    transition-property: background-color, transform;
+}
+
+.test4:hover{
+    background-color: yellow;
+    font-size: 50px;
+    transform: translateX(100px);
+}
+
