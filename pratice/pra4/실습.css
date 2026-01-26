@@ -1,9 +1,11 @@
-*{
+/* div{
     border: 1px solid black;
-    box-sizing: border-box;
-}
+    box-sizing: border-box; 
+} */
+
 
 #container{
+    border: 1px solid black;
     width: 800px;
     margin: auto;    
     
@@ -11,8 +13,7 @@
 
 .hd1{
     border: 1px solid black;
-    flex-wrap: wrap;
-    height:130px;
+    height:100px;
     display: flex;
     
 }
@@ -23,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .box2{
@@ -51,12 +53,71 @@
 
 .hd2{
     border: 1px solid black;
+    background-color: white;
+    /* border-bottom: 2px solid black; */
+
+    display: flex;
+    width: auto;
+    height: 50px;
+
+    position: sticky;
+    top: 0;
+
+    /*  
+        stickey
+        - 스크롤이 임계점에 도달했을 때 화면에 스티커처럼 요소를 붙이는 속성
+        -평소에는 기본 positon상태를 유지하다가, 임계점 도달시 fixed로 변경된다.
+        -top,bottom,left,right 속성이 필수로 작성되어야한다.
+    */
+
+}
+
+.hd2 > ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.hd2 li{
+    flex : 0 1 150px;
+
+}
+
+.hd2 a{
+    display: block;
+    height: 100%;
+    width: 100px;
+
+    text-align: center;
+    /* padding: 11px 0; */
+    line-height: 50px;
+
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.hd2 a:hover{
+    background-color: #455ba8;
+    color: white;
+    border-radius: 5px;
+    width:100px;
+    transition-duration: 0.1s;
+}
+
+/* 
+    .hd2{
+    border: 1px solid black;
     display: flex;
     width: auto;
     height: auto;
 }
 
-.menu{
+    .menu{
     width: 120px;
     height: 50px;
     text-align: center;
@@ -70,26 +131,115 @@
     cursor: pointer;  
     border: 1px solid black;
     border-radius: 20%;
-}
+} */
 
 .hd3{
     display: flex;
-    width: auto;
+    height:500px;
+    border: 1px solid black;
 }
 
-.round1{
+.hd3 > div:nth-child(1){
     width: 70%;
-    height:500px;
+    border: 1px solid black;
 }
 
-.round2{
+.round{ 
+    
     width: 30%;
-    height:500px;
+    height: 140px;
     padding: 10px;
-    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
+#id-pw-area{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #ddd;
+
+    display: flex;
+    flex-basis: 60%;
+    border: 1px solid black;
+}
+
+#id-pw-area > div:first-child{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+}
+#id-pw-area > div:last-child{
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+#id-pw-area > div:first-child > input{
+    border : 0;
+    border-right: 1px solid #ddd;
+    flex-basis: 50%;
+    outline: 0;
+    margin: 0;
+    padding: 5px;
+}
+
+#id-pw-area > div:last-child > button{
+    flex-basis: 100%;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+#id-pw-area > div:last-child > button:hover{
+    color: white;
+}
+
+#singup{
+    
+    flex-basis: 20%;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+
+#signup > a{
+    
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#signup > span{
+    
+    padding: 0 10px;
+}
+
+
+#footer{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#footer > p{
+    font-weight: bold;
+}
+
+#footer > div > a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#footer > div > span{
+    padding: 0 10px;
+}
 
 /* #query{
     width:500px;
