@@ -63,6 +63,31 @@
     <script>
         // console.log(a);
     </script>
+
+    <h1>Hoisting</h1>
+    <script>
+        //var b; // var 키워드 변수는 hoisting된다.(맨위로 끌어올림)
+        // function foo; // 함수는 호이스팅된다,
+
+        console.log(b); // undefind
+
+        var b = "안녕";
+        foo();
+
+        // 함수도 hoisting 된다.
+        function foo(){
+            console.log("foo");
+        }
+
+        //함수표현식으로 생성한 함수는,
+        // 호이스팅되지 않는다.
+
+        var bar = function(){
+            console.log("bar")
+        };
+        bar();
+        
+    </script>
 </body>
 
 </html>
