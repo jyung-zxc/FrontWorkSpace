@@ -55,5 +55,214 @@ test2.onclick = function(){
     arr3[7]();
 }
 
+test3.onclick = function(){
+    var arr =  ['apple','melon','mango','banana','melon'];
+    console.log(arr.indexOf('melon'));
+    console.log(arr.lastIndexOf('melon'));
+    console.log(arr.indexOf('strawberry')); // -1   
+};
+
+test4.onclick = function(){
+    var arr1 = ['a','b','c'];
+    var arr2 = [1,2,3,4,5];  
+
+    var newArr = arr1.concat(arr2);
+    console.log(newArr);
+    console.log(arr1);
+};
+
+test5.onclick = function(){
+    // join : 배열 내부의 요소를 하나로 뭉친 문자열 리턴
+    var arr = [1,2,3,4,5];
+    var str = arr.join();
+    console.log(str);
+
+    var str = arr.join("");
+    console.log(str);
+}
+
+test6.onclick = function(){
+    var arr = [1,2,3,4,5];
+    arr.reverse(); // 원본 배열의 정렬 순서를 변경
+    console.log(arr);
+}
+
+test7.onclick = function(){
+    var arr = [4,3,1,5,2];
+    console.log(arr.sort()); // 원본 배열 정렬
+
+    // 내림차순 정렬
+    // 정렬기준을 "함수"로 만든다
+    arr.sort(function(a, b){
+        return b - a;
+    });
+    console.log(arr);
+
+    // 문자열 정렬 : 오름차순
+    var names = ["홍길동","김길동","라마단","다나까"];
+    console.log(names.sort());
+
+    // 내림차순?
+    names.sort(function(a,b){
+        if(a>b) return -1;
+        if(a<b) return 1;
+        return 0;
+    });
+    console.log(names);
+
+    // sort메서드의 기본 정렬은 "문자열 기준"정렬
+    arr = [1,2, 15];
+    console.log(arr.sort()); // 1,15,1
+    // "2" > 15 > 1
+
+    console.log(arr.sort(function(a,b){
+        return a-b;
+    }));
+}
+
+/*
+    push : 배열 마지막에 요소를 추가한 후,변경된 깊이를 반환
+    pop : 배열 마지막 요소를 제거한 후, 제거된요소를 반환
+*/
+test8.onclick = function(){
+    var arr = [];
+    arr.push(1);
+    arr.push(2);
+    arr.push(3);
+
+    console.log(arr);
+
+    console.log(arr.pop());
+    console.log(arr.pop());
+    console.log(arr);
+}
+
+/*
+    unshift : 배열의 0번 인ㄷ엑스에 요소 추가후, 변경된 길이 변환
+    shift : 배열의 0번 인덱스의 오소 제거 ㅎㅜ , 제거된 ㅂ
+*/
+test9.onclick = function(){
+    var arr = ["사과","배","예능"];
+    arr.unshift('감자');
+
+    console.log(arr);
+    console.log(arr.shift());
+}
+
+// slice
+test10.onclick = function(){
+    var arr = ['a','b','c','d','e'];
+    //b,c,d만 추출
+    var other = arr.slice(1,4);
+
+    console.log(other);
+    console.log(arr);
+}
+
+/*
+    splice(start,deleteCount, 추가할 요소 1,4,3....)
+    -중간위치에 요소를추가하거나 삭제하는 메서드
+    -start인덱스부터,deletecount개의 요소를제거하고
+    추가할 요소들을 추가한ㄷ.
+*/
+
+test11.onclick = function(){
+    var arr = ['a','b','c','d','e'];
+
+    // a x y c d e
+    arr.splice(1,1,'x','y');
+    console.log(arr);
+    // a x k h e
+    arr.splice(1,3 ,'k' ,'h');
+    console.log(arr);
+    // a x f r i k h e
+    arr.splice(1,0,'f','r','i');
+    console.log(arr);
+    // a
+    arr.splice(1,7);
+    console.log(arr);
+
+}
+
+/*
+    * prompt를 이용해 사용자의 취미리스트를 입력받으세요.
+     * 예) 농구,수영,캠핑,낚시
+     * ,구분자로 잘라서 배열로 담은후,
+     * 사전순 정렬이후, ul#hobby-list의 자식li태그로 추가하세요.
+*/
+test12.onclick = function(){
+    var name = prompt("취미를 입력해주세요:");
+
+    var arr = hoobies.split(",").sort();
+
+    var result = (arr);
+
+    var result ="";
+    for(var hobby of arr){
+        result += li +  " hobby ";
+    }
+}
+
+/*
+forEach(function(value, index){
+        //실행구문
+    })
+*/
+test13.onclick = function(){
+    var arr =[1,2,3,4,5];
+    var sum = 0;
+
+    arr.forEach( (num, index, arr2) => {
+        console.log()
+        sum+=num;
+    });
+    console.log(sum);
+
+
+    /**
+     * 1) 배열 drink에 #drink태그의 자식li태그 텍스트를 추가. (forEach활용)
+     * ['coke', 'juice', 'coffee', 'beer', 'wine']
+     * 2) 배열 drink에서 'ff'가 들어가는 요소를 선택해서 findOne 반환. (find 활용)
+     *  coffee
+     * 3) 배열 drink에서  'o'가 들어가는 요소들을 선택해서 filteredArr 반환. (filter활용)
+     * ['coke','coffee']
+     * 4) 배열 drink를 활용하여 음료객체 배열을 생성 한후 mappedDrink에 반환(map 활용)     *
+     * [{"menu": "coke","price": 2000},{"menu": "juice","price": 1600},{"menu": "coffee","price": 4000},
+     *  {"menu": "beer","price": 8000},{"menu": "wine","price": 15000}]
+     */
+    
+    var drink = [];
+      var findOne ;
+      var filteredArr;
+      var mappedDrink;
+      var priceArr = [2000, 1600, 4000, 8000, 15000];
+    // 1. foreach    
+    document.querySelectorAll("#drink > li").forEach( function(){
+        drink.push(li.innerHTML);
+    });
+
+    // 2.find
+    var findOne = drink.find(function (d){
+        return d.includes("ff");
+    });
+    console.log(findOne);
+
+    //3.filter
+    var filteredArr = drink.filter( function(d){
+        return d.includes("o");
+    });
+    console.log(filteredArr);
+
+    // 4. map
+    var priceArr = [2000, 1600, 4000, 8000 , 15000];
+    var mappedDrink = drink.map(function(d,i){
+        return {menu : d, price : priceArr[i]};
+    });
+    console.log(mappedDrink);
+}
+
+test14.onclick = function(){
+    
+}
 
 

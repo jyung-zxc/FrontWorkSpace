@@ -33,15 +33,14 @@
 	<script type="text/javascript">
 		function printValue() {
 			
-			area.innerHTML = "";
-			
 			var names = document.querySelector("input[placeholder='구매자의 이름을 입력하세요.']");
 			var pnames = document.querySelector("#pname")
 			var prices = document.querySelector("input[name=price]");
 			
-			area.innerHTML += "구입자 : "+names.value +"님<br>";
-			area.innerHTML += "구입상품 : "+pnames.value +"<br>";
-			area.innerHTML += "구매가격 : "+prices.value+"만원";
+			// 선택한 요소의 입력값을 가져오려면 .value  필요
+			area.innerHTML = "구입자 : "+names.value +"님<br>"
+							+ "구입상품 : "+pnames.value +"<br>"
+							+ "구매가격 : "+prices.value+"만원";
 		}
 	</script>
 </body>
