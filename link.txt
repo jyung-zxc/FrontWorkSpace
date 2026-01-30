@@ -11,5 +11,3 @@ https://app.slack.com/client/T0A64NGRNDC/C0A66QY7QHY?entry_point=nav_menu&lpt=1
 
 https://github.com/jyung-zxc?tab=repositories
 
-HTML 4~7 수정
-11

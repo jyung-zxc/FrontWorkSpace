@@ -6,52 +6,63 @@ img{
 /* transform : 변형과 관련된 속성 */
 .trans-x-2d:hover{
     transform: translateX(100px);
-    /* transform: translateX(-100px); */
 }
 
 .trans-y-2d:hover{
-    transform:translateY(100px);
-    /* transform:translateY(-100px); */
+    transform:translateY(-100px);
 }
 
 .trans-d-2d:hover{
-    transform:translate(100px,-100px)
+    transform: translate(-100px , 100px);
 }
 
+/* scale(배율) */
 .trans-x-scale:hover{
-    transform: scaleX(2);
+    transform:scaleX(3);
 }
 
 .trans-y-scale:hover{
-    transform: scaleY(2);
+    transform:scaleY(2);
 }
 
 .trans-d-scale:hover{
-    transform: scale(2,2);
+    transform:scale(2,2);
 }
 
-.trans-rotate:hover{
-    transform: rotateX(180deg);
+.trans-rotate:hover{ 
+    transform:rotate(180deg)
 }
 
 .trans-3d:hover{
-    /* perspective(z축의 길이  : 원근법적용 */
-    transform: translate3d(300px,200px,100px);
-
+    /* perspective(z축의 길이) : 원근법 적용  */
+    transform : perspective(300px) translate3d(50px, 50px, 100px);
 }
 
 .trans-rotate-x-3d:hover{
- transform:perspective(300[px]),rotate
- ('angle')   
+    transform: perspective(300px) rotateX(45deg);
 }
 
-/* .te */
+.trans-rotate-y-3d:hover{
+    transform: perspective(300px) rotatey(45deg);
+}
 
+.trans-rotate-z-3d:hover{
+    transform: perspective(300px) rotatez(45deg);
+}
+
+.trans-rotate-3d:hover{
+    transform: perspective(300px) rotate3d(0.5 , 0.5, 0.5 ,45deg);
+}
+
+/* transition */
 .box{
+    width: 150px;
+    height: 150px;
     border: 1px solid black;
-    width: 100px;
-    height: 100px;
     background-color: red;
+
+    /* 스타일이 변경되는 시간을 지정 */
+    transition-duration: 1s;
 }
 
 .test1:hover{
@@ -60,7 +71,7 @@ img{
 
 .test2:hover{
     transform:rotate(360deg);
-    background-color:  skyblue;
+    background-color: skyblue;
 
     border-radius: 50%;
 }
@@ -68,8 +79,7 @@ img{
 .test3{
     /* 변경에 걸리는 시간 */
     transition-duration: 3s;
-
-    transition-timing-function: cubic-bezier(0,-0,69,0,2.91);
+    transition-timing-function: cubic-bezier(0,-0.69,0,2.91);
 }
 
 .test3:hover{
@@ -77,7 +87,7 @@ img{
 }
 
 .test4{
-    transition-delay: 1s;
+    transition-delay : 1s;
     transition-property: background-color, transform;
 }
 
@@ -86,4 +96,8 @@ img{
     font-size: 50px;
     transform: translateX(100px);
 }
+
+
+
+
 
