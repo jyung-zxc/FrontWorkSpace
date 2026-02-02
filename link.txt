@@ -19,5 +19,4 @@ https://github.com/jyung-zxc?tab=repositories
 <script src="/jq/jquery-4.0.0.js"></script>
 
 
-js11 
-jq4 5
+jq 8 9 
