@@ -13,7 +13,10 @@
     <script>
         //체크한 체크박스의 value값들을 콘솔창에 출력
         function checkBtn(){
-         
+            var $check = $("input").filter(":checked");
+            $check.each(function(i, input){
+                console.log($(input).val());
+            });
         }
     </script>
         
@@ -30,6 +33,8 @@
     <script>
         //선택한 select박스의 value값을 콘솔창에 출력
         function selectBtn(){
+            var $options = $("option").filter(":selected");
+            console.log($options.val());
         }
     </script>
         
